@@ -231,3 +231,20 @@
   google.maps.event.addDomListener(window, 'load', initialize_google_map);
 
 })(jQuery);
+
+$(function() {
+    $(window).on('scroll', function() {
+        $('.slide-up ,.slide-down').each(function() {
+            const elementTop = $(this).offset().top;
+            const scrollTop = $(window).scrollTop();
+            const windowHeight = $(window).height();
+
+            if (scrollTop + windowHeight > elementTop + 100) {
+                $(this).addClass('show');
+            }
+        });
+    });
+
+    $(window).trigger('scroll'); // 페이지 로드시 바로 확인용
+});
+

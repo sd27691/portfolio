@@ -514,6 +514,8 @@ text-align: center;}
   line-height: 36px;
   margin-bottom: 20px;
 }
+/* 브랜드부분 배경색 */
+/* #branding{background-color: #d3edf0b0;} */
 
 .section-headline.services-head>h2 {
   margin-bottom: 25px;
@@ -2379,3 +2381,19 @@ span.email-notes {
 }
 .well-middle .about-start{font-size: 17px;
 font-weight: bold;}
+
+.show.slide-up,
+.show.slide-down {
+    transform: translateY(0);
+    opacity: 1;
+}
+.slide-down {
+    opacity: 0;
+    transform: translateY(-50px);
+    transition: all 1s;}
+
+    .slide-up {
+        opacity: 0;
+        transform: translateY(50px);
+        transition: all 1s;
+    }
